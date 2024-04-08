@@ -1,14 +1,35 @@
 import { useForm } from "react-hook-form";
 import { AtSign, LockKeyhole, Eye, EyeOff, User, ImageUp } from "lucide-react";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Register = () => {
   const { register, handleSubmit } = useForm();
   const [show, setShow] = useState(false);
+  const { createUser, updateUser } = useContext(AuthContext);
 
-  const handleLogin = (data) => {
-    console.log(data);
+  const handleRegister = (data) => {
+    const name = data.userName;
+    const email = data.userEmail;
+    const photoURL = data.userPhotoURL;
+    const password = data.userPassword;
+    console.log(name, email, photoURL, password);
+
+    createUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+        updateUser(name, photoURL)
+          .then(() => {
+            console.log("profile updated");
+          })
+          .catch((error) => {
+            console.error(error.message);
+          });
+      })
+      .catch((error) => {
+        console.error(error.message);
+      });
   };
 
   return (
@@ -17,7 +38,7 @@ const Register = () => {
         <h3 className='text-3xl font-bold text-colorTertiary text-center mb-10'>
           Register
         </h3>
-        <form onSubmit={handleSubmit(handleLogin)}>
+        <form onSubmit={handleSubmit(handleRegister)}>
           <div>
             <label
               htmlFor='name'

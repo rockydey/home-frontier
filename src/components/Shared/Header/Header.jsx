@@ -1,8 +1,22 @@
 import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
 import { Menu } from "lucide-react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../../Provider/AuthProvider";
+import DropDownMenu from "../../DropDownMenu/DropDownMenu";
 
 const Header = () => {
+  const { user } = useContext(AuthContext);
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  const handleMouseEnter = () => {
+    setDropdownVisible(true);
+  };
+  const handleMouseLeave = () => {
+    setDropdownVisible(false);
+  };
+
   const navLinks = (
     <>
       <li>
@@ -14,9 +28,11 @@ const Header = () => {
       <li>
         <NavLink to='/contact'>Contact</NavLink>
       </li>
-      <li>
-        <NavLink to='/updateProfile'>Update Profile</NavLink>
-      </li>
+      {user && (
+        <li>
+          <NavLink to='/updateProfile'>Update Profile</NavLink>
+        </li>
+      )}
     </>
   );
 
@@ -44,11 +60,26 @@ const Header = () => {
           </ul>
         </div>
         <div className='navbar-end'>
-          <Link to='/login'>
-            <button className='text-lg font-semibold bg-colorPrimary text-[#fff] px-6 md:px-8 py-2 rounded-md'>
-              Login
-            </button>
-          </Link>
+          {user ? (
+            <div
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              onClick={() => {
+                setOpen(!open);
+              }}
+              className='avatar relative cursor-pointer'>
+              <div className='w-10 rounded-full ring ring-colorPrimary ring-offset-base-100 ring-offset-2'>
+                <img src={user?.photoURL} />
+              </div>
+              {(isDropdownVisible || open) && <DropDownMenu />}
+            </div>
+          ) : (
+            <Link to='/login'>
+              <button className='text-lg font-semibold bg-colorPrimary text-[#fff] px-6 md:px-8 py-2 rounded-md'>
+                Login
+              </button>
+            </Link>
+          )}
         </div>
       </div>
     </div>

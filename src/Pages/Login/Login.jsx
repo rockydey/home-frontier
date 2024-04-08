@@ -1,15 +1,39 @@
 import { useForm } from "react-hook-form";
 import { AtSign, LockKeyhole, Eye, EyeOff } from "lucide-react";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaTwitter, FaGoogle } from "react-icons/fa";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Login = () => {
   const { register, handleSubmit } = useForm();
   const [show, setShow] = useState(false);
+  const { signInUser, googleLogin } = useContext(AuthContext);
 
   const handleLogin = (data) => {
-    console.log(data);
+    const email = data.userEmail;
+    const password = data.userPassword;
+    console.log(email, password);
+
+    // Sign in with email and password
+    signInUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.error(error.message);
+      });
+  };
+
+  // Login with google
+  const handleGoogleLogin = () => {
+    googleLogin()
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.error(error.message);
+      });
   };
 
   return (
@@ -94,6 +118,7 @@ const Login = () => {
               <FaTwitter />
             </div>
             <div
+              onClick={handleGoogleLogin}
               className='tooltip tooltip-error w-14 h-14 rounded-full flex items-center justify-center text-[#fff] bg-[#ea4335] text-2xl cursor-pointer'
               data-tip='Login with google'>
               <FaGoogle />
