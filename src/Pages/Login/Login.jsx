@@ -76,7 +76,7 @@ const Login = () => {
           <input
             className='block w-full mt-6 bg-colorPrimary text-[#fff] font-medium text-lg py-3 rounded-full cursor-pointer'
             type='submit'
-            value='Submit'
+            value='Login'
           />
           <p className='text-center text-sm text-colorSecondary font-normal mt-4'>
             Do not have any account?{" "}
