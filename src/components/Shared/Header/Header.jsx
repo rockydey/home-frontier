@@ -4,17 +4,23 @@ import { Menu } from "lucide-react";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import DropDownMenu from "../../DropDownMenu/DropDownMenu";
+import { toast } from "react-toastify";
 
 const Header = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
   const [isDropdownVisible, setDropdownVisible] = useState(false);
-  const [open, setOpen] = useState(false);
 
   const handleMouseEnter = () => {
     setDropdownVisible(true);
   };
   const handleMouseLeave = () => {
     setDropdownVisible(false);
+  };
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => toast.success("Logged out successfully!"))
+      .catch((error) => console.error(error.message));
   };
 
   const navLinks = (
@@ -61,17 +67,21 @@ const Header = () => {
         </div>
         <div className='navbar-end'>
           {user ? (
-            <div
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-              onClick={() => {
-                setOpen(!open);
-              }}
-              className='avatar relative cursor-pointer'>
-              <div className='w-10 rounded-full ring ring-colorPrimary ring-offset-base-100 ring-offset-2'>
-                <img src={user?.photoURL} />
+            <div className='flex items-center gap-5'>
+              <div
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                className='avatar relative cursor-pointer'>
+                <div className='w-10 rounded-full ring ring-colorPrimary ring-offset-base-100 ring-offset-2'>
+                  <img src={user?.photoURL} />
+                </div>
+                {isDropdownVisible && <DropDownMenu />}
               </div>
-              {(isDropdownVisible || open) && <DropDownMenu />}
+              <button
+                onClick={handleLogOut}
+                className='cursor-pointer hidden lg:inline-block text-lg font-semibold bg-colorPrimary text-[#fff] px-6 md:px-8 py-2 rounded-md'>
+                LogOut
+              </button>
             </div>
           ) : (
             <Link to='/login'>

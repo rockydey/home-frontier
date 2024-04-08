@@ -3,11 +3,16 @@ import { AtSign, LockKeyhole, Eye, EyeOff, User, ImageUp } from "lucide-react";
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Register = () => {
   const { register, handleSubmit } = useForm();
   const [show, setShow] = useState(false);
   const { createUser, updateUser } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [error, setError] = useState("");
 
   const handleRegister = (data) => {
     const name = data.userName;
@@ -16,19 +21,28 @@ const Register = () => {
     const password = data.userPassword;
     console.log(name, email, photoURL, password);
 
+    if (!/^(?=.*[a-z])(?=.*[A-Z]).{6,}$/.test(password)) {
+      setError(
+        "Password should have a uppercase and a lowercase and also minimum 6 character!"
+      );
+      return;
+    }
     createUser(email, password)
       .then((result) => {
+        toast.success("Logged in successfully!");
+        setError("");
         console.log(result.user);
         updateUser(name, photoURL)
           .then(() => {
             console.log("profile updated");
           })
           .catch((error) => {
-            console.error(error.message);
+            toast.error(error.message);
           });
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
-        console.error(error.message);
+        toast.error(error.message);
       });
   };
 
@@ -54,7 +68,7 @@ const Register = () => {
                 type='text'
                 className='w-full px-4 focus:outline-none text-base font-normal text-colorSecondary'
                 placeholder='Name'
-                {...register("userName")}
+                {...register("userName", { required: true })}
                 required
               />
             </div>
@@ -74,7 +88,7 @@ const Register = () => {
                 type='email'
                 className='w-full px-4 focus:outline-none text-base font-normal text-colorSecondary'
                 placeholder='Email Address'
-                {...register("userEmail")}
+                {...register("userEmail", { required: true })}
                 required
               />
             </div>
@@ -94,7 +108,7 @@ const Register = () => {
                 type='text'
                 className='w-full px-4 focus:outline-none text-base font-normal text-colorSecondary'
                 placeholder='Photo URL'
-                {...register("userPhotoURL")}
+                {...register("userPhotoURL", { required: true })}
                 required
               />
             </div>
@@ -114,7 +128,7 @@ const Register = () => {
                 type={show ? "text" : "password"}
                 className='w-full px-4 focus:outline-none text-base font-normal text-colorSecondary'
                 placeholder='Password'
-                {...register("userPassword")}
+                {...register("userPassword", { required: true })}
                 required
               />
               <div
@@ -129,6 +143,11 @@ const Register = () => {
                 )}
               </div>
             </div>
+            {
+              <div className='text-[#de463b] text-sm font-normal mt-2'>
+                {error}
+              </div>
+            }
           </div>
           <input
             className='block w-full mt-6 bg-colorPrimary text-[#fff] font-medium text-lg py-3 rounded-full cursor-pointer'

@@ -9,15 +9,15 @@ const DropDownMenu = () => {
       .catch((error) => console.error(error.message));
   };
   return (
-    <div className='absolute top-[42px] right-[-2px] lg:right-[-50px] '>
-      <ul className=' z-[1] p-2 shadow bg-base-100 rounded-box'>
-        <li className='text-colorTertiary text-lg font-medium text-center mb-4 '>
+    <div className='absolute top-[42px] lg:top-12 right-[-2px] lg:right-[-50px] '>
+      <ul className=' z-[1] p-2 shadow lg:shadow-xl bg-colorPrimary  rounded-box'>
+        <li className='text-[#fff] lg:w-32 text-lg font-medium text-center mb-4 lg:mb-0'>
           {user.displayName}
         </li>
-        <li className="text-center">
+        <li className='text-center lg:hidden'>
           <button
             onClick={handleLogOut}
-            className='cursor-pointer text-lg font-semibold bg-colorPrimary text-[#fff] px-6 md:px-8 py-2 rounded-md'>
+            className='cursor-pointer text-lg font-semibold border border-[#fff] text-[#fff] px-6 md:px-8 py-2 rounded-md'>
             LogOut
           </button>
         </li>

@@ -4,11 +4,15 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaTwitter, FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const { register, handleSubmit } = useForm();
   const [show, setShow] = useState(false);
   const { signInUser, googleLogin } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleLogin = (data) => {
     const email = data.userEmail;
@@ -18,10 +22,12 @@ const Login = () => {
     // Sign in with email and password
     signInUser(email, password)
       .then((result) => {
+        toast.success("Logged in successfully!");
         console.log(result.user);
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
-        console.error(error.message);
+        toast.error(error.message);
       });
   };
 
@@ -29,10 +35,12 @@ const Login = () => {
   const handleGoogleLogin = () => {
     googleLogin()
       .then((result) => {
+        toast.success("Logged in successfully!");
         console.log(result.user);
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
-        console.error(error.message);
+        toast.error(error.message);
       });
   };
 
@@ -58,7 +66,7 @@ const Login = () => {
                 type='email'
                 className='w-full px-4 focus:outline-none text-base font-normal text-colorSecondary'
                 placeholder='Your Email'
-                {...register("userEmail")}
+                {...register("userEmail", { required: true })}
                 required
               />
             </div>
@@ -78,7 +86,7 @@ const Login = () => {
                 type={show ? "text" : "password"}
                 className='w-full px-4 focus:outline-none text-base font-normal text-colorSecondary'
                 placeholder='Your Password'
-                {...register("userPassword")}
+                {...register("userPassword", { required: true })}
                 required
               />
               <div

@@ -127,9 +127,11 @@ const Footer = () => {
         </footer>
       </div>
       <div className='border-t border-[#ffffff2e] my-10'></div>
-      <div className='max-w-screen-xl mx-auto pb-10 flex flex-col lg:flex-row items-center justify-between space-y-5 lg:space-y-0'>
+      <div className='max-w-screen-xl mx-auto pb-10 flex flex-col px-5 lg:px-0 lg:flex-row items-center justify-center lg:justify-between space-y-5 lg:space-y-0'>
         <div className='text-[#e8e7e7] text-lg font-light'>
-          <p>&copy; 2022 HomeFrontier. All Rights Reserved.</p>
+          <p className='text-center lg:text-left'>
+            &copy; 2022 HomeFrontier. All Rights Reserved.
+          </p>
         </div>
         <div className='flex items-center gap-3 text-[#e8e7e7]'>
           <div className='bg-[#1b1e83] p-3 hover:bg-[#3b5999] cursor-pointer'>
