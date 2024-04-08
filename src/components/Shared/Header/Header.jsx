@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <div>
-      <div className='navbar bg-base-100'>
+      <div className='navbar lg:px-0 bg-base-100'>
         <div className='navbar-start'>
           <div className='dropdown'>
             <div tabIndex={0} role='button' className='mr-2 lg:hidden'>
