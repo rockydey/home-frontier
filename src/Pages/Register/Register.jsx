@@ -7,7 +7,11 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const Register = () => {
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm();
   const [show, setShow] = useState(false);
   const { createUser, updateUser } = useContext(AuthContext);
   const location = useLocation();
@@ -69,9 +73,11 @@ const Register = () => {
                 className='w-full px-4 focus:outline-none text-base font-normal text-colorSecondary'
                 placeholder='Name'
                 {...register("userName", { required: true })}
-                required
               />
             </div>
+            {errors.userName?.type === "required" && (
+              <span className='text-[#de463b]'>Name is required!</span>
+            )}
           </div>
           <div>
             <label
@@ -89,9 +95,11 @@ const Register = () => {
                 className='w-full px-4 focus:outline-none text-base font-normal text-colorSecondary'
                 placeholder='Email Address'
                 {...register("userEmail", { required: true })}
-                required
               />
             </div>
+            {errors.userEmail?.type === "required" && (
+              <span className='text-[#de463b]'>Email is required!</span>
+            )}
           </div>
           <div>
             <label
@@ -109,9 +117,11 @@ const Register = () => {
                 className='w-full px-4 focus:outline-none text-base font-normal text-colorSecondary'
                 placeholder='Photo URL'
                 {...register("userPhotoURL", { required: true })}
-                required
               />
             </div>
+            {errors.userPhotoURL?.type === "required" && (
+              <span className='text-[#de463b]'>Photo URL is required!</span>
+            )}
           </div>
           <div>
             <label
@@ -129,7 +139,6 @@ const Register = () => {
                 className='w-full px-4 focus:outline-none text-base font-normal text-colorSecondary'
                 placeholder='Password'
                 {...register("userPassword", { required: true })}
-                required
               />
               <div
                 onClick={() => {
@@ -148,6 +157,9 @@ const Register = () => {
                 {error}
               </div>
             }
+            {errors.userPassword?.type === "required" && (
+              <span className='text-[#de463b]'>Password is required!</span>
+            )}
           </div>
           <input
             className='block w-full mt-6 bg-colorPrimary text-[#fff] font-medium text-lg py-3 rounded-full cursor-pointer'
