@@ -1,8 +1,12 @@
+import { useEffect } from "react";
 import notFoundImg from "../../assets/images/404.jpg";
 import Footer from "../../components/Shared/Footer/Footer";
 import Header from "../../components/Shared/Header/Header";
 
 const NotFound = () => {
+  useEffect(() => {
+    document.title = "404! Not Found";
+  });
   return (
     <div>
       <Header />
