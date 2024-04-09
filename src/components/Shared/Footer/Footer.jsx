@@ -10,6 +10,7 @@ import {
   Twitter,
   Instagram,
   Youtube,
+  Phone,
 } from "lucide-react";
 
 const Footer = () => {
@@ -50,7 +51,6 @@ const Footer = () => {
                   <MapPin />
                 </div>
                 <p className='text-base font-normal'>
-                  {" "}
                   123 Sydney St. South Wales City
                 </p>
               </div>
@@ -59,18 +59,14 @@ const Footer = () => {
                   <MailCheck />
                 </div>
                 <p className='text-base font-normal'>
-                  {" "}
                   contact@homeFrontier.com
                 </p>
               </div>
               <div className='flex items-center gap-2 cursor-pointer'>
                 <div className='bg-[#1b1e83] w-10 h-10 rounded-full flex items-center justify-center'>
-                  <MapPin />
+                  <Phone />
                 </div>
-                <p className='text-base font-normal'>
-                  {" "}
-                  123 Sydney St. South Wales City
-                </p>
+                <p className='text-base font-normal'>+44829362351</p>
               </div>
             </div>
           </nav>

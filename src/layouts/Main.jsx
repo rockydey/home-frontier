@@ -7,10 +7,8 @@ import "react-toastify/dist/ReactToastify.css";
 const Main = () => {
   return (
     <div className='font-poppins'>
-      <div className='max-w-screen-xl mx-auto'>
-        <Header />
-        <Outlet />
-      </div>
+      <Header />
+      <Outlet />
       <Footer />
       <ToastContainer />
     </div>
