@@ -7,6 +7,10 @@ import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import NotFound from "../Pages/NotFound/NotFound";
+import Apartment from "../components/Apartment/Apartment";
+import House from "../components/House/House";
+import Villa from "../components/Villa/Villa";
+import HomeProperties from "../components/HomeProperties/HomeProperties";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +21,25 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        children: [
+          {
+            path: "/",
+            element: <HomeProperties />,
+            loader: () => fetch("../properties.json"),
+          },
+          {
+            path: "/apartment",
+            element: <Apartment />,
+          },
+          {
+            path: "/house",
+            element: <House />,
+          },
+          {
+            path: "/villa",
+            element: <Villa />,
+          },
+        ],
       },
       {
         path: "/blogs",
