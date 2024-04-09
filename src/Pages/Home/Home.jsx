@@ -3,6 +3,8 @@ import Banner from "../../components/Banner/Banner";
 import { Outlet } from "react-router-dom";
 import { useEffect } from "react";
 import Experience from "../../components/Experience/Experience";
+import Partners from "../../components/Partners/Partners";
+import PopularPlace from "../../components/PopularPlace/PopularPlace";
 
 const Home = () => {
   useEffect(() => {
@@ -46,10 +48,10 @@ const Home = () => {
       <Banner />
       <div className='py-20 bg-[#faf8f8]'>
         <div className='text-center'>
-          <p className='text-lg font-normal text-colorPrimary mb-3'>
+          <p className='text-lg font-normal uppercase text-colorPrimary mb-3'>
             Best Sale And Rent Properties
           </p>
-          <h2 className='text-colorTertiary text-3xl font-bold'>
+          <h2 className='text-colorTertiary uppercase text-3xl font-bold'>
             FEATURED <span className='text-colorPrimary'>PROPERTIES</span>
           </h2>
         </div>
@@ -63,6 +65,8 @@ const Home = () => {
         </div>
       </div>
       <Experience />
+      <Partners />
+      <PopularPlace />
     </div>
   );
 };
