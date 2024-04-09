@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import Banner from "../../components/Banner/Banner";
 import { Outlet } from "react-router-dom";
+import { useEffect } from "react";
 
 const Home = () => {
+  useEffect(() => {
+    document.title = "Home";
+  });
   const navLinks = (
     <>
       <li className='bg-[#fff] shadow-lg px-4 py-1 rounded'>

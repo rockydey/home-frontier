@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { AtSign, LockKeyhole, Eye, EyeOff, User, ImageUp } from "lucide-react";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -17,6 +17,10 @@ const Register = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [error, setError] = useState("");
+
+  useEffect(() => {
+    document.title = "Register";
+  });
 
   const handleRegister = (data) => {
     const name = data.userName;

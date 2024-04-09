@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { AtSign, LockKeyhole, Eye, EyeOff } from "lucide-react";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaTwitter, FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../Provider/AuthProvider";
@@ -13,6 +13,10 @@ const Login = () => {
   const { signInUser, googleLogin } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = "Login";
+  });
 
   const handleLogin = (data) => {
     const email = data.userEmail;

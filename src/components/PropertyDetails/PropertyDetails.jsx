@@ -1,11 +1,16 @@
 import { useParams, useLoaderData } from "react-router-dom";
 import { MapPin, BedDouble, Bath, LandPlot, CarFront } from "lucide-react";
+import { useEffect } from "react";
 
 const PropertyDetails = () => {
   const { id } = useParams();
   const properties = useLoaderData();
   const parseId = parseInt(id);
   const propertyDetail = properties.find((property) => property.id === parseId);
+
+  useEffect(() => {
+    document.title = `Property - ${propertyDetail.estate_title}`;
+  });
 
   const {
     estate_title,
