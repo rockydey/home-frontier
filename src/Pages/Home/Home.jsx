@@ -52,7 +52,7 @@ const Home = () => {
             {navLinks}
           </ul>
         </nav>
-        <div className='max-w-screen-xl mx-auto'>
+        <div className='max-w-screen-xl mx-auto px-5 lg:px-0'>
           <Outlet />
         </div>
       </div>

@@ -61,7 +61,7 @@ const HomeProperty = ({ property }) => {
           </p>
         </div>
         <div className='divider'></div>
-        <div className='flex justify-between items-center'>
+        <div className='flex justify-between items-center gap-2'>
           <p className='flex items-center gap-2 text-lg font-medium text-colorTertiary'>
             <Receipt width={20} height={20} />
             {price}

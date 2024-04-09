@@ -11,6 +11,7 @@ import Apartment from "../components/Apartment/Apartment";
 import House from "../components/House/House";
 import Villa from "../components/Villa/Villa";
 import HomeProperties from "../components/HomeProperties/HomeProperties";
+import PropertyDetails from "../components/PropertyDetails/PropertyDetails";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
             element: <HomeProperties />,
             loader: () => fetch("../properties.json"),
           },
+
           {
             path: "/apartment",
             element: <Apartment />,
@@ -40,6 +42,11 @@ const router = createBrowserRouter([
             element: <Villa />,
           },
         ],
+      },
+      {
+        path: "/property/:id",
+        element: <PropertyDetails />,
+        loader: () => fetch("../properties.json"),
       },
       {
         path: "/blogs",
