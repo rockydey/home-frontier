@@ -1,5 +1,4 @@
-import { useParams } from "react-router-dom";
-import { useLoaderData } from "react-router-dom";
+import { useParams, useLoaderData } from "react-router-dom";
 import { MapPin, BedDouble, Bath, LandPlot, CarFront } from "lucide-react";
 
 const PropertyDetails = () => {
