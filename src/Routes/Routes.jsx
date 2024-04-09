@@ -12,6 +12,7 @@ import House from "../components/House/House";
 import Villa from "../components/Villa/Villa";
 import HomeProperties from "../components/HomeProperties/HomeProperties";
 import PropertyDetails from "../components/PropertyDetails/PropertyDetails";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -48,7 +49,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/property/:id",
-        element: <PropertyDetails />,
+        element: (
+          <PrivateRoute>
+            <PropertyDetails />
+          </PrivateRoute>
+        ),
         loader: () => fetch("../properties.json"),
       },
       {
@@ -61,7 +66,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/updateProfile",
-        element: <UpdateProfile />,
+        element: (
+          <PrivateRoute>
+            <UpdateProfile />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/login",
