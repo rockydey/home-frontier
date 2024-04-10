@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 const Blog = ({ blog }) => {
   const { title, author, date, category, tags, content, image } = blog;
   return (
-    <div className='card p-6 rounded-2xl border border-[#13131326]'>
+    <div className='card p-3 md:p-6 rounded-2xl border border-[#13131326]'>
       <div>
         <h3 className='playfair text-colorTertiary text-xl font-semibold mt-4'>
           {title}
@@ -14,7 +14,7 @@ const Blog = ({ blog }) => {
           </p>
           <img src={image} className='w-14 rounded-full' alt='' />
         </div>
-        <div className='flex gap-3'>
+        <div className='flex flex-wrap gap-3'>
           {tags.map((tag, idx) => (
             <p
               className='work-sans text-base font-medium text-colorPrimary px-4 py-2 bg-[#23BE0A0D] rounded-full'

@@ -19,7 +19,7 @@ const Blogs = () => {
               Your Gateway to Dream Homes: Explore Residential Real Estate with
               Us
             </h1>
-            <p className='text-lg font-normal work-sans w-full md:w-1/2 mx-auto'>
+            <p className='text-lg font-normal work-sans w-full md:w-3/4 lg:w-1/2 mx-auto'>
               Discover your perfect home with our comprehensive residential real
               estate services. From buying and selling to investment advice and
               neighborhood insights, we are here to guide you every step of the
