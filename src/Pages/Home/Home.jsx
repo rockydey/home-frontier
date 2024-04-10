@@ -13,28 +13,28 @@ const Home = () => {
 
   const navLinks = (
     <>
-      <li className='bg-[#fff] shadow-lg px-4 py-1 rounded'>
+      <li className='bg-[#fff] shadow-lg px-3 md:px-4 py-1 rounded'>
         <Link
           className='focus:text-colorPrimary focus:border-b-2 focus:border-b-colorPrimary'
           to='/'>
           All
         </Link>
       </li>
-      <li className='bg-[#fff] shadow-lg px-4 py-1 rounded'>
+      <li className='bg-[#fff] shadow-lg px-3 md:px-4 py-1 rounded'>
         <Link
           className='focus:text-colorPrimary focus:border-b-2 focus:border-b-colorPrimary'
           to='/apartment'>
           Apartment
         </Link>
       </li>
-      <li className='bg-[#fff] shadow-lg px-4 py-1 rounded'>
+      <li className='bg-[#fff] shadow-lg px-3 md:px-4 py-1 rounded'>
         <Link
           className='focus:text-colorPrimary focus:border-b-2 focus:border-b-colorPrimary'
           to='/house'>
           House
         </Link>
       </li>
-      <li className='bg-[#fff] shadow-lg px-4 py-1 rounded'>
+      <li className='bg-[#fff] shadow-lg px-3 md:px-4 py-1 rounded'>
         <Link
           className='focus:text-colorPrimary focus:border-b-2 focus:border-b-colorPrimary'
           to='/villa'>

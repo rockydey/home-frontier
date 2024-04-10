@@ -57,7 +57,7 @@ const Header = () => {
                 {navLinks}
               </ul>
             </div>
-            <Link to='/' className='text-3xl font-semibold text-colorPrimary'>
+            <Link to='/' className='text-[27px] md:text-3xl font-semibold text-colorPrimary'>
               <span className='text-colorTertiary'>Home</span>Frontier
             </Link>
           </div>
