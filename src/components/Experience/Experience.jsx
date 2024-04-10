@@ -12,9 +12,8 @@ const Experience = () => {
       className='bg-center bg-no-repeat bg-cover py-40 px-5 lg:px-0'>
       <div className='max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
         <div
-          data-aos='fade-right'
-          data-aos-offset='300'
-          data-aos-easing='ease-in-sine'
+          data-aos='zoom-in'
+          data-aos-duration='1000'
           className='flex items-center gap-3 p-3 border border-dashed border-[#fff] rounded-lg'>
           <div className='text-5xl p-3 bg-[#fff] text-colorTertiary'>
             <LiaTrophySolid />
@@ -27,9 +26,8 @@ const Experience = () => {
           </div>
         </div>
         <div
-          data-aos='fade-right'
-          data-aos-offset='300'
-          data-aos-easing='ease-in-sine'
+          data-aos='zoom-in'
+          data-aos-duration='1000'
           className='flex items-center gap-3 p-3 border border-dashed border-[#fff] rounded-lg'>
           <div className='text-5xl p-3 bg-[#fff] text-colorTertiary'>
             <FaRegFaceLaughBeam />
@@ -42,9 +40,8 @@ const Experience = () => {
           </div>
         </div>
         <div
-          data-aos='fade-left'
-          data-aos-offset='300'
-          data-aos-easing='ease-in-sine'
+          data-aos='zoom-in'
+          data-aos-duration='1000'
           className='flex items-center gap-3 p-3 border border-dashed border-[#fff] rounded-lg'>
           <div className='text-5xl p-3 bg-[#fff] text-colorTertiary'>
             <BsGraphUpArrow />
@@ -57,9 +54,8 @@ const Experience = () => {
           </div>
         </div>
         <div
-          data-aos='fade-left'
-          data-aos-offset='300'
-          data-aos-easing='ease-in-sine'
+          data-aos='zoom-in'
+          data-aos-duration='1000'
           className='flex items-center gap-3 p-3 border border-dashed border-[#fff] rounded-lg'>
           <div className='text-5xl p-3 bg-[#fff] text-colorTertiary'>
             <MdOutlineAddHomeWork />

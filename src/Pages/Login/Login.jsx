@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { AtSign, LockKeyhole, Eye, EyeOff } from "lucide-react";
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { FaTwitter, FaGoogle } from "react-icons/fa";
+import { FaGithub, FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -10,7 +10,7 @@ import { toast } from "react-toastify";
 const Login = () => {
   const { register, handleSubmit } = useForm();
   const [show, setShow] = useState(false);
-  const { signInUser, googleLogin } = useContext(AuthContext);
+  const { signInUser, googleLogin, githubLogin } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -39,6 +39,18 @@ const Login = () => {
   // Login with google
   const handleGoogleLogin = () => {
     googleLogin()
+      .then((result) => {
+        toast.success("Logged in successfully!");
+        console.log(result.user);
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
+  };
+
+  const handleGithubLogin = () => {
+    githubLogin()
       .then((result) => {
         toast.success("Logged in successfully!");
         console.log(result.user);
@@ -126,9 +138,10 @@ const Login = () => {
           </div>
           <div className='flex items-center justify-center gap-5'>
             <div
-              className='tooltip tooltip-info w-14 h-14 rounded-full flex items-center justify-center text-[#fff] bg-[#1da1f2] text-2xl cursor-pointer'
+              onClick={handleGithubLogin}
+              className='tooltip tooltip-info w-14 h-14 rounded-full flex items-center justify-center text-[#fff] bg-colorSecondary text-2xl cursor-pointer'
               data-tip='Login with twitter'>
-              <FaTwitter />
+              <FaGithub />
             </div>
             <div
               onClick={handleGoogleLogin}
