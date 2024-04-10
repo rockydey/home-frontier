@@ -1,8 +1,22 @@
-# React + Vite
+# Welcome to HomeFrontier
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a Residential Real Estate property selling or giving rent website where you can buy or take as rent beautiful House, Apartment, and Villa etc.
 
-Currently, two official plugins are available:
+## Live Website : (https://home-frontier-auth.web.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Features
+- User can login or register this website so that they can see the protected document
+- User can update their name and photo 
+- User can see beautiful property on home page 
+- User can see details of the property by click "View Property" button
+- User can sort property using navigation at Feature Property section on home page
+
+### npm package that are user in this website
+- react hook form
+- Swiper slider
+- AOS package
+- Animate.css
+- react toastify
+- react-countup
+- react spinners
+- react icons
