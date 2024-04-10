@@ -18,7 +18,7 @@ const PopularPlace = () => {
           <div className='relative'>
             <div className=''>
               <img
-                data-aos='zoom-in-right'
+                 data-aos="zoom-out-up"
                 data-aos-duration='1000'
                 className='lg:h-[566px]'
                 src={popular6}
@@ -35,7 +35,7 @@ const PopularPlace = () => {
           <div className='relative'>
             <div className=''>
               <img
-                data-aos='zoom-in-left'
+                data-aos='zoom-in-down'
                 data-aos-duration='1000'
                 className='lg:h-[271px]'
                 src={popular1}
@@ -50,7 +50,7 @@ const PopularPlace = () => {
           <div className='relative'>
             <div className=''>
               <img
-                data-aos='zoom-in-left'
+                data-aos='zoom-out-down'
                 data-aos-duration='1000'
                 className='lg:h-[271px]'
                 src={popular2}
@@ -65,7 +65,7 @@ const PopularPlace = () => {
           <div className='relative'>
             <div className=''>
               <img
-                data-aos='zoom-in-left'
+                data-aos='zoom-out-down'
                 data-aos-duration='1000'
                 className='lg:h-[271px]'
                 src={popular3}
@@ -80,7 +80,7 @@ const PopularPlace = () => {
           <div className='relative'>
             <div className=''>
               <img
-                data-aos='zoom-in-left'
+                data-aos='zoom-out-down'
                 data-aos-duration='1000'
                 className='lg:h-[271px]'
                 src={popular4}

@@ -56,7 +56,7 @@ const UpdateProfile = () => {
                   id='name'
                   type='text'
                   className='w-full px-4 focus:outline-none text-base font-normal text-colorSecondary'
-                  placeholder='Name'
+                  placeholder={`${user?.displayName}`}
                   {...register("userName")}
                 />
               </div>
@@ -76,7 +76,7 @@ const UpdateProfile = () => {
                   type='email'
                   defaultValue={user?.email}
                   readOnly
-                  className='w-full px-4 focus:outline-none text-base font-normal text-colorSecondary'
+                  className='w-full px-4 focus:outline-none text-base font-normal text-[#ADADAD]'
                   placeholder='Email Address'
                   {...register("userEmail")}
                 />
@@ -96,7 +96,7 @@ const UpdateProfile = () => {
                   id='photoURL'
                   type='text'
                   className='w-full px-4 focus:outline-none text-base font-normal text-colorSecondary'
-                  placeholder='Photo URL'
+                  placeholder={`${user?.photoURL}`}
                   {...register("userPhotoURL")}
                 />
               </div>
