@@ -23,7 +23,10 @@ const HomeProperty = ({ property }) => {
     bathrooms,
   } = property;
   return (
-    <div className='shadow-lg rounded-2xl'>
+    <div
+      data-aos='fade-up'
+      data-aos-duration='1000'
+      className='shadow-lg rounded-2xl'>
       <div className='relative'>
         <img className='rounded-t-2xl' src={image} alt='' />
         <p className='absolute left-5 top-5 shadow border-0 bg-colorPrimary px-4 py-1 rounded text-[#fff] text-base font-medium'>

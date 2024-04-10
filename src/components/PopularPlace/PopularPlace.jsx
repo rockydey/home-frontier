@@ -17,7 +17,13 @@ const PopularPlace = () => {
         <div>
           <div className='relative'>
             <div className=''>
-              <img className='lg:h-[566px]' src={popular6} alt='' />
+              <img
+                data-aos='zoom-in-right'
+                data-aos-duration='1000'
+                className='lg:h-[566px]'
+                src={popular6}
+                alt=''
+              />
             </div>
             <div className='absolute left-5 bottom-5 text-[#fff]'>
               <h5 className='text-xl font-medium'>United States</h5>
@@ -28,7 +34,13 @@ const PopularPlace = () => {
         <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
           <div className='relative'>
             <div className=''>
-              <img className='lg:h-[271px]' src={popular1} alt='' />
+              <img
+                data-aos='zoom-in-left'
+                data-aos-duration='1000'
+                className='lg:h-[271px]'
+                src={popular1}
+                alt=''
+              />
             </div>
             <div className='absolute left-5 bottom-5 text-[#fff]'>
               <h5 className='text-xl font-medium'>Sydney</h5>
@@ -37,7 +49,13 @@ const PopularPlace = () => {
           </div>
           <div className='relative'>
             <div className=''>
-              <img className='lg:h-[271px]' src={popular2} alt='' />
+              <img
+                data-aos='zoom-in-left'
+                data-aos-duration='1000'
+                className='lg:h-[271px]'
+                src={popular2}
+                alt=''
+              />
             </div>
             <div className='absolute left-5 bottom-5 text-[#fff]'>
               <h5 className='text-xl font-medium'>California</h5>
@@ -46,7 +64,13 @@ const PopularPlace = () => {
           </div>
           <div className='relative'>
             <div className=''>
-              <img className='lg:h-[271px]' src={popular3} alt='' />
+              <img
+                data-aos='zoom-in-left'
+                data-aos-duration='1000'
+                className='lg:h-[271px]'
+                src={popular3}
+                alt=''
+              />
             </div>
             <div className='absolute left-5 bottom-5 text-[#fff]'>
               <h5 className='text-xl font-medium'>London</h5>
@@ -55,7 +79,13 @@ const PopularPlace = () => {
           </div>
           <div className='relative'>
             <div className=''>
-              <img className='lg:h-[271px]' src={popular4} alt='' />
+              <img
+                data-aos='zoom-in-left'
+                data-aos-duration='1000'
+                className='lg:h-[271px]'
+                src={popular4}
+                alt=''
+              />
             </div>
             <div className='absolute left-5 bottom-5 text-[#fff]'>
               <h5 className='text-xl font-medium'>Rome</h5>

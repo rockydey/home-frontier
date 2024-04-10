@@ -3,7 +3,10 @@ import PropTypes from "prop-types";
 const Blog = ({ blog }) => {
   const { title, author, date, category, tags, content, image } = blog;
   return (
-    <div className='card p-3 md:p-6 rounded-2xl border border-[#13131326]'>
+    <div
+      data-aos='fade-up'
+      data-aos-duration='1000'
+      className='card p-3 md:p-6 rounded-2xl border border-[#13131326]'>
       <div>
         <h3 className='playfair text-colorTertiary text-xl font-semibold mt-4'>
           {title}

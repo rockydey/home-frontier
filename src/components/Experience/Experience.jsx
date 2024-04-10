@@ -8,10 +8,16 @@ import CountUp from "react-countup";
 const Experience = () => {
   return (
     <div
+      data-aos='flip-up'
+      data-aos-duration='1000'
       style={{ backgroundImage: `url(${experienceImg})` }}
       className='bg-center bg-no-repeat bg-cover py-40 px-5 lg:px-0'>
       <div className='max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-        <div className='flex items-center gap-3 p-3 border border-dashed border-[#fff] rounded-lg'>
+        <div
+          data-aos='fade-right'
+          data-aos-offset='300'
+          data-aos-easing='ease-in-sine'
+          className='flex items-center gap-3 p-3 border border-dashed border-[#fff] rounded-lg'>
           <div className='text-5xl p-3 bg-[#fff] text-colorTertiary'>
             <LiaTrophySolid />
           </div>
@@ -22,7 +28,11 @@ const Experience = () => {
             <p className='text-lg font-medium uppercase'>Awards wining</p>
           </div>
         </div>
-        <div className='flex items-center gap-3 p-3 border border-dashed border-[#fff] rounded-lg'>
+        <div
+          data-aos='fade-right'
+          data-aos-offset='300'
+          data-aos-easing='ease-in-sine'
+          className='flex items-center gap-3 p-3 border border-dashed border-[#fff] rounded-lg'>
           <div className='text-5xl p-3 bg-[#fff] text-colorTertiary'>
             <FaRegFaceLaughBeam />
           </div>
@@ -33,7 +43,11 @@ const Experience = () => {
             <p className='text-lg font-medium uppercase'>Happy Clients</p>
           </div>
         </div>
-        <div className='flex items-center gap-3 p-3 border border-dashed border-[#fff] rounded-lg'>
+        <div
+          data-aos='fade-left'
+          data-aos-offset='300'
+          data-aos-easing='ease-in-sine'
+          className='flex items-center gap-3 p-3 border border-dashed border-[#fff] rounded-lg'>
           <div className='text-5xl p-3 bg-[#fff] text-colorTertiary'>
             <BsGraphUpArrow />
           </div>
@@ -44,7 +58,11 @@ const Experience = () => {
             <p className='text-lg font-medium uppercase'>Done Projects</p>
           </div>
         </div>
-        <div className='flex items-center gap-3 p-3 border border-dashed border-[#fff] rounded-lg'>
+        <div
+          data-aos='fade-left'
+          data-aos-offset='300'
+          data-aos-easing='ease-in-sine'
+          className='flex items-center gap-3 p-3 border border-dashed border-[#fff] rounded-lg'>
           <div className='text-5xl p-3 bg-[#fff] text-colorTertiary'>
             <MdOutlineAddHomeWork />
           </div>

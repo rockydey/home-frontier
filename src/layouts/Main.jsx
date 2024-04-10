@@ -3,6 +3,9 @@ import Header from "../components/Shared/Header/Header";
 import Footer from "../components/Shared/Footer/Footer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 const Main = () => {
   return (
