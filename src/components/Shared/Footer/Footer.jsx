@@ -108,7 +108,7 @@ const Footer = () => {
                 Let us guide you through every step of the process with
                 expertise and dedication.
               </p>
-              <div className='flex'>
+              <div className='flex w-full'>
                 <input
                   type='email'
                   placeholder='Email Address'

@@ -13,7 +13,7 @@ const Agents = () => {
   });
   return (
     <div className=''>
-      <div className='max-w-screen-xl mx-auto mt-32 mb-20'>
+      <div className='max-w-screen-xl mx-auto mt-32 mb-20 px-5 lg:px-0'>
         <h3 className='text-3xl font-bold mb-8 text-colorTertiary text-center'>
           Our Agents
         </h3>
@@ -124,7 +124,7 @@ const Agents = () => {
             A Testimonial for{" "}
             <span className='text-colorPrimary'>HomeFrontier</span>
           </h4>
-          <div className='w-1/2 mx-auto'>
+          <div className='w-full md:w-3/4 lg:w-1/2 mx-auto px-5 md:px-0'>
             <Testimonial />
           </div>
         </div>

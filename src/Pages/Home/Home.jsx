@@ -76,7 +76,7 @@ const Home = () => {
           <h4 className='text-3xl font-bold text-[#fff] text-center mb-8'>
             A Testimonial for HomeFrontier
           </h4>
-          <div className='w-1/2 mx-auto'>
+          <div className='w-full md:w-3/4 lg:w-1/2 mx-auto px-5 md:px-0'>
             <Testimonial />
           </div>
         </div>

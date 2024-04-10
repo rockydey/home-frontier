@@ -31,7 +31,7 @@ const Testimonial = () => {
                 professionalism and expertise. Thanks to their dedication, we
                 found our dream home quickly and seamlessly. Highly recommend!
               </p>
-              <div className='flex gap-3 mx-auto items-center bg-[#fff] w-[45%] rounded-full p-2'>
+              <div className='flex gap-3 mx-auto items-center bg-[#fff] w-[90%] md:w-3/5 lg:w-1/2 rounded-full p-2'>
                 <img className='w-20 rounded-full' src={testImg1} alt='' />
                 <div className='text-[]'>
                   <p className='text-lg font font-medium text-colorTertiary'>
@@ -55,7 +55,7 @@ const Testimonial = () => {
                 staging advice to negotiation skills, they exceeded my
                 expectations. I would not hesitate to work with them again.
               </p>
-              <div className='flex gap-3 mx-auto items-center bg-[#fff] w-[45%] rounded-full p-2'>
+              <div className='flex gap-3 mx-auto items-center bg-[#fff] w-[90%] md:w-3/5 lg:w-1/2 rounded-full p-2'>
                 <img className='w-20 rounded-full' src={testImg2} alt='' />
                 <div className='text-[]'>
                   <p className='text-lg font font-medium text-colorTertiary'>
@@ -79,7 +79,7 @@ const Testimonial = () => {
                 perfect home. Their professionalism and attention to detail were
                 remarkable. We could not be happier with the outcome!
               </p>
-              <div className='flex gap-3 mx-auto items-center bg-[#fff] w-[45%] rounded-full p-2'>
+              <div className='flex gap-3 mx-auto items-center bg-[#fff] w-[90%] md:w-3/5 lg:w-1/2 rounded-full p-2'>
                 <img className='w-20 rounded-full' src={testImg3} alt='' />
                 <div className='text-[]'>
                   <p className='text-lg font font-medium text-colorTertiary'>
