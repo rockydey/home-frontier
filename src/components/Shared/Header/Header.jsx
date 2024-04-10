@@ -34,6 +34,9 @@ const Header = () => {
       <li>
         <NavLink to='/contact'>Contact</NavLink>
       </li>
+      <li>
+        <NavLink to='/agents'>Agents</NavLink>
+      </li>
       {user && (
         <li>
           <NavLink to='/updateProfile'>Update Profile</NavLink>
@@ -57,7 +60,9 @@ const Header = () => {
                 {navLinks}
               </ul>
             </div>
-            <Link to='/' className='text-[27px] md:text-3xl font-semibold text-colorPrimary'>
+            <Link
+              to='/'
+              className='text-[27px] md:text-3xl font-semibold text-colorPrimary'>
               <span className='text-colorTertiary'>Home</span>Frontier
             </Link>
           </div>

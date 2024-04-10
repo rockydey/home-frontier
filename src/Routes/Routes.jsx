@@ -13,6 +13,7 @@ import Villa from "../components/Villa/Villa";
 import HomeProperties from "../components/HomeProperties/HomeProperties";
 import PropertyDetails from "../components/PropertyDetails/PropertyDetails";
 import PrivateRoute from "./PrivateRoute";
+import Agents from "../Pages/Agents/Agents";
 
 const router = createBrowserRouter([
   {
@@ -63,6 +64,14 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/agents",
+        element: (
+          <PrivateRoute>
+            <Agents />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/updateProfile",

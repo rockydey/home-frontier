@@ -9,9 +9,9 @@ const DropDownMenu = () => {
       .catch((error) => console.error(error.message));
   };
   return (
-    <div className='absolute top-[42px] lg:top-12 right-[-2px] lg:right-[-50px] '>
+    <div className='absolute top-[42px] lg:top-12 right-[-2px] lg:right-[-65px] '>
       <ul className=' z-[1] p-2 shadow lg:shadow-xl bg-colorPrimary  rounded-box'>
-        <li className='text-[#fff] lg:w-32 text-lg font-medium text-center mb-4 lg:mb-0'>
+        <li className='text-[#fff] lg:w-40 text-lg font-medium text-center mb-4 lg:mb-0'>
           {user.displayName}
         </li>
         <li className='text-center lg:hidden'>

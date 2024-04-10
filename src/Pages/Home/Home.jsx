@@ -5,6 +5,8 @@ import { useEffect } from "react";
 import Experience from "../../components/Experience/Experience";
 import Partners from "../../components/Partners/Partners";
 import PopularPlace from "../../components/PopularPlace/PopularPlace";
+import Testimonial from "../../components/Testimonial/Testimonial";
+import testBg from "../../assets/images/testimonial-bg.jpg";
 
 const Home = () => {
   useEffect(() => {
@@ -67,6 +69,18 @@ const Home = () => {
       <Experience />
       <Partners />
       <PopularPlace />
+      <div
+        style={{ backgroundImage: `url(${testBg})` }}
+        className='bg-center bg-no-repeat bg-cover'>
+        <div className='max-w-screen-xl mx-auto py-20'>
+          <h4 className='text-3xl font-bold text-[#fff] text-center mb-8'>
+            A Testimonial for HomeFrontier
+          </h4>
+          <div className='w-1/2 mx-auto'>
+            <Testimonial />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
