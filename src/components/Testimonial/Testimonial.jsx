@@ -7,7 +7,6 @@ import testImg1 from "../../assets/images/review1.jpg";
 import testImg2 from "../../assets/images/review2.jpg";
 import testImg3 from "../../assets/images/review3.jpg";
 
-
 const Testimonial = () => {
   return (
     <div>
@@ -87,7 +86,7 @@ const Testimonial = () => {
                     Alexander Rivera
                   </p>
                   <p className='text-base font-normal text-colorSecondary'>
-                    Delighted Homebuyers
+                    Delighted Buyers
                   </p>
                 </div>
               </div>

@@ -13,8 +13,8 @@ const Agents = () => {
   });
   return (
     <div className=''>
-      <div className='max-w-screen-xl mx-auto mt-40 mb-20'>
-        <h3 className='text-3xl font-bold mb-5 text-colorTertiary text-center'>
+      <div className='max-w-screen-xl mx-auto mt-32 mb-20'>
+        <h3 className='text-3xl font-bold mb-8 text-colorTertiary text-center'>
           Our Agents
         </h3>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
@@ -121,7 +121,8 @@ const Agents = () => {
         className='bg-center bg-no-repeat bg-cover'>
         <div className='max-w-screen-xl mx-auto py-20'>
           <h4 className='text-3xl font-bold text-[#fff] text-center mb-8'>
-            A Testimonial for HomeFrontier
+            A Testimonial for{" "}
+            <span className='text-colorPrimary'>HomeFrontier</span>
           </h4>
           <div className='w-1/2 mx-auto'>
             <Testimonial />

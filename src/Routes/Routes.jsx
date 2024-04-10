@@ -2,7 +2,6 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../layouts/Main";
 import Home from "../Pages/Home/Home";
 import Blogs from "../Pages/Blogs/Blogs";
-import Contact from "../Pages/Contact/Contact";
 import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
@@ -60,10 +59,7 @@ const router = createBrowserRouter([
       {
         path: "/blogs",
         element: <Blogs />,
-      },
-      {
-        path: "/contact",
-        element: <Contact />,
+        loader: () => fetch("../blogs.json"),
       },
       {
         path: "/agents",
