@@ -8,8 +8,6 @@ import CountUp from "react-countup";
 const Experience = () => {
   return (
     <div
-      data-aos='flip-up'
-      data-aos-duration='1000'
       style={{ backgroundImage: `url(${experienceImg})` }}
       className='bg-center bg-no-repeat bg-cover py-40 px-5 lg:px-0'>
       <div className='max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
