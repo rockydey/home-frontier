@@ -108,12 +108,12 @@ const Footer = () => {
                 Let us guide you through every step of the process with
                 expertise and dedication.
               </p>
-              <div className='hidden md:flex'>
+              <div className='flex'>
                 <div>
                   <input
                     type='email'
                     placeholder='Email Address'
-                    className='rounded-sm md:px-4 py-3 focus:outline-none text-colorTertiary text-base font-normal'
+                    className='rounded-sm px-4 py-3 focus:outline-none text-colorTertiary text-base font-normal'
                   />
                 </div>
                 <div className='bg-colorPrimary p-3 text-[#fff] rounded-e cursor-pointer'>
