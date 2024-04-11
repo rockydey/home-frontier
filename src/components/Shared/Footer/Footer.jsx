@@ -116,12 +116,12 @@ const Footer = () => {
                 Let us guide you through every step of the process with
                 expertise and dedication.
               </p>
-              <div className='flex px-5 md:px-0'>
+              <div className='flex'>
                 <div>
                   <input
                     type='email'
                     placeholder='Email Address'
-                    className='rounded-sm pl-4 py-3 focus:outline-none text-colorTertiary text-base font-normal'
+                    className='rounded-s-sm pl-4 py-3 focus:outline-none text-colorTertiary text-base font-normal'
                   />
                 </div>
                 <div className='bg-colorPrimary p-3 text-[#fff] rounded-e cursor-pointer'>
