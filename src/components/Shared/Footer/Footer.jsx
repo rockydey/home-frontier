@@ -113,7 +113,7 @@ const Footer = () => {
                   <input
                     type='email'
                     placeholder='Email Address'
-                    className='rounded-sm px-4 py-3 focus:outline-none text-colorTertiary text-base font-normal'
+                    className='rounded-sm pl-4 py-3 focus:outline-none text-colorTertiary text-base font-normal'
                   />
                 </div>
                 <div className='bg-colorPrimary p-3 text-[#fff] rounded-e cursor-pointer'>
