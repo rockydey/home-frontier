@@ -30,14 +30,25 @@ const UpdateProfile = () => {
     <div className='max-w-screen-xl mx-auto mt-40 px-5 lg:px-0'>
       <div className='w-full md:w-3/4 lg:w-3/5 mx-auto mb-20'>
         <div className='flex items-center justify-between'>
-          <h3 className='text-3xl text-colorTertiary font-bold'>
-            Edit Profile
-          </h3>
-          <img
-            src={user?.photoURL}
-            className='rounded-full w-20  ring ring-colorPrimary ring-offset-base-100 ring-offset-2'
-            alt=''
-          />
+          <div>
+            <h3 className='text-3xl text-colorTertiary font-bold mb-4'>
+              Edit Profile
+            </h3>
+            <p className='mb-2 text-lg font-normal text-colorSecondary'>
+              <span className='text-colorTertiary'>Name:</span>{" "}
+              {user?.displayName}
+            </p>
+            <p className='text-lg font-normal text-colorSecondary'>
+              <span className='text-colorTertiary'>Email:</span> {user?.email}
+            </p>
+          </div>
+          <div className=''>
+            <img
+              src={user?.photoURL}
+              className='rounded-full w-20 h-20 ring ring-colorPrimary ring-offset-base-100 ring-offset-2'
+              alt=''
+            />
+          </div>
         </div>
         <div className='divider'></div>
         <div className='w-full md:w-5/6 lg:w-3/4 mx-auto'>

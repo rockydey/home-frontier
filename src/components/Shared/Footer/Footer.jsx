@@ -18,8 +18,8 @@ const Footer = () => {
     <div
       style={{ backgroundImage: `url(${footerBg})` }}
       className='bg-center bg-no-repeat bg-cover'>
-      <div className='max-w-screen-xl mx-auto pt-20'>
-        <footer className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 px-5 lg:px-0'>
+      <div className='max-w-screen-xl mx-auto pt-20 px-5 lg:px-0'>
+        <footer className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5'>
           <aside className='space-y-3'>
             <div>
               <Link to='/' className='text-3xl font-semibold text-colorPrimary'>
@@ -108,7 +108,7 @@ const Footer = () => {
                 Let us guide you through every step of the process with
                 expertise and dedication.
               </p>
-              <div className='flex'>
+              <div className='flex px-5 md:px-0'>
                 <div>
                   <input
                     type='email'
