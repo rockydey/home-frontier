@@ -17,7 +17,15 @@ const Footer = () => {
   return (
     <div
       style={{ backgroundImage: `url(${footerBg})` }}
-      className='bg-center bg-no-repeat bg-cover'>
+      className='bg-center bg-no-repeat bg-cover relative z-0'>
+      <div className='lines'>
+        <div className='line'></div>
+        <div className='line'></div>
+        <div className='line'></div>
+        <div className='line'></div>
+        <div className='line'></div>
+        <div className='line'></div>
+      </div>
       <div className='max-w-screen-xl mx-auto pt-20 px-5 lg:px-0'>
         <footer className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5'>
           <aside className='space-y-3'>
