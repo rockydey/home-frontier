@@ -4,7 +4,7 @@ const Blog = ({ blog }) => {
   const { title, author, date, category, tags, content, image } = blog;
   return (
     <div
-      data-aos='fade-up'
+      data-aos='zoom-in-up'
       data-aos-duration='1000'
       className='card p-3 md:p-6 rounded-2xl border border-[#13131326]'>
       <div>

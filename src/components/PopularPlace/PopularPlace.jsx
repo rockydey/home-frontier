@@ -18,8 +18,8 @@ const PopularPlace = () => {
           <div className='relative'>
             <div className=''>
               <img
-                 data-aos="zoom-out-up"
-                data-aos-duration='1000'
+                data-aos='fade-up'
+                data-aos-duration='3000'
                 className='lg:h-[566px]'
                 src={popular6}
                 alt=''
@@ -35,8 +35,9 @@ const PopularPlace = () => {
           <div className='relative'>
             <div className=''>
               <img
-                data-aos='zoom-in-down'
-                data-aos-duration='1000'
+                data-aos='fade-down'
+                data-aos-easing='linear'
+                data-aos-duration='1500'
                 className='lg:h-[271px]'
                 src={popular1}
                 alt=''
@@ -50,8 +51,9 @@ const PopularPlace = () => {
           <div className='relative'>
             <div className=''>
               <img
-                data-aos='zoom-out-down'
-                data-aos-duration='1000'
+                data-aos='fade-down'
+                data-aos-easing='linear'
+                data-aos-duration='1500'
                 className='lg:h-[271px]'
                 src={popular2}
                 alt=''
@@ -65,8 +67,9 @@ const PopularPlace = () => {
           <div className='relative'>
             <div className=''>
               <img
-                data-aos='zoom-out-down'
-                data-aos-duration='1000'
+                data-aos='fade-down'
+                data-aos-easing='linear'
+                data-aos-duration='1500'
                 className='lg:h-[271px]'
                 src={popular3}
                 alt=''
@@ -80,8 +83,9 @@ const PopularPlace = () => {
           <div className='relative'>
             <div className=''>
               <img
-                data-aos='zoom-out-down'
-                data-aos-duration='1000'
+                data-aos='fade-down'
+                data-aos-easing='linear'
+                data-aos-duration='1500'
                 className='lg:h-[271px]'
                 src={popular4}
                 alt=''

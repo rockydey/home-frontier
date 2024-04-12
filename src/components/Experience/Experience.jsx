@@ -12,7 +12,7 @@ const Experience = () => {
       className='bg-center bg-no-repeat bg-cover py-40 px-5 lg:px-0'>
       <div className='max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
         <div
-          data-aos='zoom-in'
+          data-aos='flip-up'
           data-aos-duration='1000'
           className='flex items-center gap-3 p-3 border border-dashed border-[#fff] rounded-lg'>
           <div className='text-5xl p-3 bg-[#fff] text-colorTertiary'>
@@ -26,7 +26,7 @@ const Experience = () => {
           </div>
         </div>
         <div
-          data-aos='zoom-in'
+          data-aos='flip-up'
           data-aos-duration='1000'
           className='flex items-center gap-3 p-3 border border-dashed border-[#fff] rounded-lg'>
           <div className='text-5xl p-3 bg-[#fff] text-colorTertiary'>
@@ -40,7 +40,7 @@ const Experience = () => {
           </div>
         </div>
         <div
-          data-aos='zoom-in'
+          data-aos='flip-up'
           data-aos-duration='1000'
           className='flex items-center gap-3 p-3 border border-dashed border-[#fff] rounded-lg'>
           <div className='text-5xl p-3 bg-[#fff] text-colorTertiary'>
@@ -54,7 +54,7 @@ const Experience = () => {
           </div>
         </div>
         <div
-          data-aos='zoom-in'
+          data-aos='flip-up'
           data-aos-duration='1000'
           className='flex items-center gap-3 p-3 border border-dashed border-[#fff] rounded-lg'>
           <div className='text-5xl p-3 bg-[#fff] text-colorTertiary'>

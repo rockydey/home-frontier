@@ -77,7 +77,8 @@ const Home = () => {
             A Testimonial for HomeFrontier
           </h4>
           <div
-            data-aos='zoom-in-up'
+            data-aos='fade-up'
+            data-aos-anchor-placement='top-bottom'
             data-aos-duration='1000'
             className='w-full md:w-3/4 lg:w-1/2 mx-auto px-5 md:px-0'>
             <Testimonial />

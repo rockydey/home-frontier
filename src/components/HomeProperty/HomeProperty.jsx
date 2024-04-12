@@ -24,7 +24,7 @@ const HomeProperty = ({ property }) => {
   } = property;
   return (
     <div
-      data-aos='fade-up'
+      data-aos='zoom-in-up'
       data-aos-duration='1000'
       className='shadow-lg rounded-2xl'>
       <div className='relative'>
