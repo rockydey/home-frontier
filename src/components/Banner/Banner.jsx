@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import "./Banner.css";
 
 const Banner = () => {
   return (
@@ -29,7 +30,7 @@ const Banner = () => {
           <div
             className='hero h-[50vh] md:h-[65vh] lg:h-[95vh] bg-center bg-no-repeat bg-cover'
             style={{ backgroundImage: `url(${bannerImg1})` }}>
-            <div className='hero-overlay bg-opacity-25'></div>
+            <div className='hero-overlay bg-[#00000080]'></div>
             <div className='hero-content text-[#fff] text-center'>
               <div className='w-11/12'>
                 <h2 className='text-2xl md:text-4xl lg:text-5xl leading-tight font-bold mb-8'>
@@ -47,7 +48,7 @@ const Banner = () => {
           <div
             className='hero h-[50vh] md:h-[65vh] lg:h-[95vh] bg-center bg-no-repeat bg-cover'
             style={{ backgroundImage: `url(${bannerImg2})` }}>
-            <div className='hero-overlay bg-opacity-25'></div>
+            <div className='hero-overlay bg-[#00000080]'></div>
             <div className='hero-content text-[#fff] text-center'>
               <div className='w-11/12'>
                 <h2 className='text-2xl md:text-4xl lg:text-5xl leading-tight font-bold mb-8'>
@@ -65,7 +66,7 @@ const Banner = () => {
           <div
             className='hero h-[50vh] md:h-[65vh] lg:h-[95vh] bg-center bg-no-repeat bg-cover'
             style={{ backgroundImage: `url(${bannerImg3})` }}>
-            <div className='hero-overlay bg-opacity-25'></div>
+            <div className='hero-overlay bg-[#00000080]'></div>
             <div className='hero-content text-[#fff] text-center'>
               <div className='w-11/12'>
                 <h2 className='text-2xl md:text-4xl lg:text-5xl leading-tight font-bold mb-8'>
@@ -83,7 +84,7 @@ const Banner = () => {
           <div
             className='hero h-[50vh] md:h-[65vh] lg:h-[95vh] bg-center bg-no-repeat bg-cover'
             style={{ backgroundImage: `url(${bannerImg4})` }}>
-            <div className='hero-overlay bg-opacity-25'></div>
+            <div className='hero-overlay bg-[#00000080]'></div>
             <div className='hero-content text-[#fff] text-center'>
               <div className='w-11/12'>
                 <h2 className='text-2xl md:text-4xl lg:text-5xl leading-tight font-bold mb-8'>
@@ -101,7 +102,7 @@ const Banner = () => {
           <div
             className='hero h-[50vh] md:h-[65vh] lg:h-[95vh] bg-center bg-no-repeat bg-cover'
             style={{ backgroundImage: `url(${bannerImg5})` }}>
-            <div className='hero-overlay bg-opacity-25'></div>
+            <div className='hero-overlay bg-[#00000080]'></div>
             <div className='hero-content text-[#fff] text-center'>
               <div className='w-11/12'>
                 <h2 className='text-2xl md:text-4xl lg:text-5xl leading-tight font-bold mb-8'>
