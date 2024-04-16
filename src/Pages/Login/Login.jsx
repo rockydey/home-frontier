@@ -140,7 +140,7 @@ const Login = () => {
             <div
               onClick={handleGithubLogin}
               className='tooltip tooltip-info w-14 h-14 rounded-full flex items-center justify-center text-[#fff] bg-colorSecondary text-2xl cursor-pointer'
-              data-tip='Login with twitter'>
+              data-tip='Login with github'>
               <FaGithub />
             </div>
             <div
