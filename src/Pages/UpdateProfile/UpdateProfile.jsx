@@ -16,6 +16,11 @@ const UpdateProfile = () => {
     const name = data.userName;
     const photoURL = data.userPhotoURL;
 
+    if (name === "" || photoURL === "") {
+      toast.error("Please provide both name and photoURL!");
+      return;
+    }
+
     updateUser(name, photoURL)
       .then(() => {
         toast.success("Profile updated successfully!");
