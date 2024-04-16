@@ -13,7 +13,7 @@ const Register = () => {
     handleSubmit,
   } = useForm();
   const [show, setShow] = useState(false);
-  const { createUser, updateUser } = useContext(AuthContext);
+  const { createUser, updateUser, setLoading } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const [error, setError] = useState("");
@@ -42,6 +42,7 @@ const Register = () => {
         console.log(result.user);
         updateUser(name, photoURL)
           .then(() => {
+            setLoading(false);
             console.log("profile updated");
           })
           .catch((error) => {
